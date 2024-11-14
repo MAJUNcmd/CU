@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes - Torneo de Fútbol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Estudiantes</h1>
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            
+            <label for="identification">Tipo de Identificación:</label>
+            <select id="identification" required>
+                <option value="TI">Tarjeta de Identidad (TI)</option>
+                <option value="CC">Cédula de Ciudadanía (CC)</option>
+            </select>
+
+            <label for="club">Club:</label>
+            <input type="text" id="club" required>
+
+            <label for="category">Categoría:</label>
+            <select id="category" required>
+                <option value="Juvenil">Juvenil</option>
+                <option value="Única">Única</option>
+            </select>
+
+            <button type="submit">Registrar Estudiante</button>
+        </form>
+
+        <h2>Lista de Estudiantes</h2>
+        <table id="studentsTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Identificación</th>
+                    <th>Club</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="studentsList"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
